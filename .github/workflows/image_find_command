@@ -1,0 +1,8 @@
+addon images version 4.103.0.0
+addon language version 4.98.18332.1321
+addon core version 4.98.18332.1321
+♥image = ♥environment⟦USERPROFILE⟧\Desktop\image.png
+file.download https://jeremykun.files.wordpress.com/2012/01/img49.png filename ♥image
+program ♥image 
+image.find ♥image result ♥point relative false
+dialog ♥point
