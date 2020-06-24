@@ -1,0 +1,37 @@
+addon selenium version 4.104.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+selenium.open chrome url g1ant.com timeout 20000 result ♥originalwindow
+selenium.newtab facebook.com
+selenium.newtab google.com
+dialog ‴Now let's go back to the first tab‴
+selenium.activatetab search g1ant by url 
+delay 5
+selenium.activatetab search facebook by url
+selenium.closetab
+delay 5 
+selenium.type badalshares search q by name
+delay 5
+selenium.presskey enter search q by name
+delay 5
+selenium.refresh
+selenium.click search TbwUpd by class
+delay 10
+selenium.gettitle result ♥tabname
+dialog ‴Tab name is: ♥tabname‴
+selenium.geturl result ♥gurl
+dialog ‴url of the website is: ♥gurl‴
+selenium.getattribute class search //*[@id="content-wrapper"]/div[2]/div[1]/div[2]/div/div/div/div[2]/div/div/div[1]/div[2]/div/div/article/div[2]/a by xpath result ♥class
+dialog ‴CLASS: ♥class‴
+selenium.click search //*[@id="content-wrapper"]/div[2]/div[1]/div[2]/div/div/div/div[2]/div/div/div[1]/div[2]/div/div/article/div[2]/a by xpath
+delay 10
+selenium.gettext search //*[@id="comp-kbotvvua3label"] by xpath result ♥gettext
+dialog ♥gettext
+selenium.setattribute class value hidden search //*[@id="comp-kbotvvua3label"] by xpath
+delay 10
+selenium.open chrome url https://www.nasa.gov nowait true result ♥nasa
+selenium.switch ♥originalwindow
+delay 10
+selenium.switch ♥nasa
+delay 5
+

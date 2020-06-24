@@ -1,0 +1,28 @@
+addon ui version 4.104.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+program notepad
+ui.click ‴/ui[@name='Untitled - Notepad']/descendant::ui[@name='Close']‴
+delay 5
+ui.gettext ‴/ui[@name='Taskbar']/descendant::ui[@name='People']‴
+dialog ♥result 
+delay 5
+program notepad
+ui.getrectangle ‴/ui[@name='Untitled - Notepad']‴
+dialog ♥result
+ui.click ‴/ui[@name='Untitled - Notepad']/descendant::ui[@name='Close']‴
+delay 5
+program notepad
+program calc
+delay 2
+ui.setfocus ‴/ui[@name='Untitled - Notepad']‴
+keyboard ⋘ALT+F4⋙
+delay 2
+keyboard ⋘ALT+F4⋙
+delay 5
+program notepad
+ui.setroot wpath ‴/ui[@name='Untitled - Notepad']‴
+ui.click ‴/ui[@id='MenuBar']/ui[@name='File']‴
+delay 2
+keyboard ⋘ALT+F4⋙
+delay 5
