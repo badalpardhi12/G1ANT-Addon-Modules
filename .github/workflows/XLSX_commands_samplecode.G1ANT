@@ -1,0 +1,22 @@
+addon xlsx version 4.104.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+xlsx.open C:\Users\user\Documents\document.xlsx accessmode readwrite createifnotexist true result ♥excelId1
+xlsx.open C:\Users\user\Desktop\US_applications.xlsx accessmode read result ♥excelId2
+xlsx.switch id ♥excelId1
+xlsx.setvalue value 123 row 1 colname a
+xlsx.getvalue row 1 colname a
+dialog ♥result
+xlsx.select row1 1 column1 A row2 1 column2 A
+xlsx.copy
+xlsx.select row1 2 column1 A row2 2 column2 A
+xlsx.paste
+xlsx.countrows result ♥rowsno
+dialog ♥rowsno
+xlsx.setvalue value 456 row 3 colname a
+xlsx.find 456 errormessage ‴Value not found‴ resultcolumn ♥col resultrow ♥row
+dialog ‴Value found in the cell: column ♥col, row ♥row‴
+xlsx.switch id ♥excelId2
+xlsx.getvalue row 3 colname B result ♥univname
+dialog ♥univname
+xlsx.close 
