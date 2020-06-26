@@ -1,0 +1,63 @@
+addon net version 4.104.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+
+
+♥price_list = ⟦list:float⟧399.99❚19❚458.59❚199
+dialog ♥price_list
+
+
+window sometitle errorresult ♥error errorjump dothis
+dialog OK
+label dothis
+dialog ‴♥error⟦type⟧, ♥error⟦message⟧‴
+
+
+
+♥entry = ⟦dictionary⟧address❚Prakash Nagar Colony
+dialog ♥entry⟦address⟧
+
+
+♥list = value1❚value 2❚value 3
+dialog ‴List elements: ‴♥list
+dialog ‴Total elements: ‴♥list⟦count⟧
+dialog ‴Second element: ‴♥list⟦2⟧
+
+
+
+♥proclist = no1❚no2❚no3
+foreach ♥proc in ♥proclist
+  call ♥proc
+end
+procedure no1
+  dialog ‴This is procedure ‴♥proc
+end
+procedure no2
+  dialog ‴And this is procedure ‴♥proc
+end
+procedure no3
+  dialog ‴And finally, procedure ‴♥proc
+end
+
+
+♥rectangle = 5⫽15⫽100⫽200
+dialog ♥rectangle⟦width⟧
+dialog ♥rectangle⟦height⟧
+dialog ♥rectangle⟦left⟧
+dialog ♥rectangle⟦top⟧
+dialog ♥rectangle⟦right⟧
+dialog ♥rectangle⟦bottom⟧
+
+
+♥source=‴<?xml version="1.0" encoding="UTF-8"?><note><to>Robot</to><from>G1ANT</from><heading>Reminder</heading><body>Don't stop working!</body></note>‴
+♥xml = ⟦xml⟧♥source
+dialog ♥xml
+dialog ♥xml⟦note⟧
+dialog ♥xml⟦note/body⟧
+
+♥time
+dialog ♥time
+♥time = ⟦time⟧12:45:11.250
+dialog ‴It's ♥time⟦minute⟧ minutes past ‴♥time⟦hour⟧
+♥time⟦hour⟧ = 11
+dialog ‴Sorry, it's exactly ♥time‴
