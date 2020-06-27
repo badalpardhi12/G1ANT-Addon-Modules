@@ -6,7 +6,7 @@ dialog ‴Welcome to Harry Potter Quiz. Let's begin!‴
 list.create text ‴1) Severus Snape     ❚2) James Potter    ❚3) Albus Dumbledore    ❚4) Sirius Black‴ result ♥options1
 procedure question1
 ♥que1 = ‴What is the name of Harry's father?‴
-dialog.ask ‴What is the name of Harry's father? \r\n♥options1‴ result ♥answer1
+dialog.ask ‴What is the name of Harry's father?                                                                                                            ♥options1‴ result ♥answer1
 if ♥answer1=="2"
     dialog ‴Correct Answer! Let's move on to the next one.‴
     else if ♥answer1=="1"
@@ -28,7 +28,7 @@ call question1
 list.create text ‴1) Gryffindor    ❚2) Slytherin   ❚3) Ravenclaw   ❚4) Hufflepuff‴ result ♥options2
 procedure question2
 ♥que2 =‴Which house did Hermione belonged to?‴
-dialog.ask ‴Which house did Hermione belonged to? \r\n♥options2‴ result ♥answer2
+dialog.ask ‴Which house did Hermione belonged to?                                                                                                 ♥options2‴ result ♥answer2
 if ♥answer2=="1"
     dialog ‴Correct Answer! Congrats You've won!‴
     else if ♥answer2=="2"
